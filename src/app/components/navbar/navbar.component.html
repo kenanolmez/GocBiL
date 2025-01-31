@@ -1,0 +1,89 @@
+<nav class="navbar" [ngClass]="{'is-sticky': scroll, 'bg-white dark:bg-slate-900 shadow dark:shadow-gray-800': bg }"
+    id="navbar">
+    <div class="container relative flex flex-wrap items-center justify-between">
+        <ng-container *ngIf="navLight; else elseTemplate">
+            <a class="navbar-brand" [routerLink]="'/'">
+                <span class="inline-block dark:hidden">
+                    <img [src]="'assets/images/logo-dark.png'" class="l-dark" alt="">
+                    <img [src]="'assets/images/logo-light.png'" class="l-light" alt="">
+                </span>
+                <img [src]="'assets/images/logo-light.png'" class="hidden dark:inline-block" alt="">
+            </a>
+        </ng-container>
+        <ng-template #elseTemplate>
+            <a class="navbar-brand md:me-8" [routerLink]="'/'">
+                <img [src]="'assets/images/logo-dark.png'" class="h-11 inline-block dark:hidden" alt="">
+                <img [src]="'assets/images/logo-light.png'" class="h-11 hidden dark:inline-block" alt="">
+            </a>
+        </ng-template>
+
+
+        <div class="nav-icons flex items-center lg_992:order-2 md:ms-6">
+            <!-- Navbar Button -->
+            <ng-container *ngIf="playBtn; else elseTemplate2">
+                <ul class="list-none menu-social mb-0">
+                    <li class="inline">
+                        <a [routerLink]="" (click)="$event.preventDefault()"
+                            class="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center"><img
+                                [src]="'assets/images/appstore.png'" alt=""></a>
+                    </li>
+
+                    <li class="inline ms-1">
+                        <a [routerLink]=""
+                            class="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center"><img
+                                [src]="'assets/images/playstore.png'" alt=""></a>
+                    </li>
+                </ul>
+            </ng-container>
+            <ng-template #elseTemplate2>
+                <!-- <ul class="list-none menu-social mb-0">
+                    <li class="inline">
+                        <a [routerLink]="" (click)="$event.preventDefault()"
+                            class="size-8 inline-flex items-center justify-center rounded-full align-middle bg-red-500/10 hover:bg-red-500 text-red-500 hover:text-white"><i
+                                data-feather="user" class="size-4"></i></a>
+                    </li>
+                    <li class="inline">
+                        <a [routerLink]="" (click)="$event.preventDefault()"
+                            class="h-8 px-4 text-[12px] tracking-wider inline-flex items-center justify-center font-medium rounded-full bg-red-500 text-white uppercase">Signup</a>
+                    </li>
+                </ul> -->
+            </ng-template>
+
+            <!-- Navbar Collapse Manu Button -->
+            <button type="button"
+                class="collapse-btn inline-flex items-center ms-2 text-slate-900 dark:text-white lg_992:hidden"
+                (click)="toggle = !toggle">
+                <span class="sr-only">Navigation Menu</span>
+                <i class="mdi mdi-menu text-[24px]"></i>
+            </button>
+        </div>
+
+        <!-- Navbar Manu -->
+        <div class="navigation lg_992:order-1 lg_992:flex" [ngClass]="toggle ? '' : 'hidden'"
+            [ngClass]="navCenter ? '' : 'ms-auto'" id="menu-collapse">
+            <ul class="navbar-nav" id="navbar-navlist" [ngClass]="navLight ? 'nav-light' : ''">
+                <li class="nav-item" [ngClass]="currentSection === 'home' ? 'active' : ''">
+                    <a class="nav-link cursor-pointer" [routerLink]="[]" (click)="scrollToSection('home')">Home</a>
+                </li>
+                <li class="nav-item ms-0" [ngClass]="currentSection === 'features' ? 'active' : ''">
+                    <a class="nav-link cursor-pointer" [routerLink]="[]"
+                        (click)="scrollToSection('features')">Özellikler</a>
+                </li>
+                <li class="nav-item ms-0" [ngClass]="currentSection === 'screenshot' ? 'active' : ''">
+                    <a class="nav-link cursor-pointer" [routerLink]="[]"
+                        (click)="scrollToSection('screenshot')">Uygulama</a>
+                </li>
+                <li class="nav-item ms-0" [ngClass]="currentSection === 'faqs' ? 'active' : ''">
+                    <a class="nav-link cursor-pointer" [routerLink]="[]" (click)="scrollToSection('faqs')">S.S.S</a>
+                </li>
+                <li class="nav-item ms-0" [ngClass]="currentSection === 'download' ? 'active' : ''">
+                    <a class="nav-link cursor-pointer" [routerLink]="[]" (click)="scrollToSection('download')">İndir</a>
+                </li>
+                <li class="nav-item ms-0" [ngClass]="currentSection === 'contact' ? 'active' : ''">
+                    <a class="nav-link cursor-pointer" [routerLink]="[]" (click)="scrollToSection('contact')">Bize
+                        Ulaşın</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

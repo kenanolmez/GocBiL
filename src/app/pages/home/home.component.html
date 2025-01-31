@@ -1,0 +1,108 @@
+<app-navbar [currentSection]="currentSection" />
+<!-- Start Hero -->
+<section
+    class="relative overflow-hidden pt-40 after:content-[''] after:absolute after:inset-0 after:mx-auto after:size-[56rem] after:bg-gradient-to-tl after:to-red-600/40  after:from-indigo-600/40 after:blur-[200px] after:rounded-full after:-z-1"
+    id="home">
+    <div class="container relative z-2">
+        <div class="grid grid-cols-1 text-center">
+            <div class="">
+
+                <ngx-typed-js [strings]="['Randevu', 'İkamet', 'Online İşlemler']" [shuffle]="true" [typeSpeed]="100"
+                    [showCursor]="false" [loop]="true" [backSpeed]="50">
+                    <h4 class="lg:leading-normal leading-normal text-4xl lg:text-[54px] mb-5 headerText"
+                        style="height: 162px;">Tüm
+                        içerikler
+                        parmaklarınızın ucunda. <br> <span class=" typewrite font-bold typing">
+                            <span class="wrap"></span></span>
+                    </h4>
+                </ngx-typed-js>
+
+                <p class="text-slate-500 dark:text-white/60 text-lg max-w-xl mx-auto">GÖÇBİL ücretsiz, kullanımı kolay
+                    mobil göçmen uygulamasıdır. İçerikleri keşfedin ve işlemlerinizi kolayca halledin.</p>
+
+                <div class="subcribe-form mt-6 mb-3">
+                    <a href="https://apps.apple.com/tr/app/g%C3%B6%C3%A7bil/id6444447699?l=tr" target="_blank"><img
+                            [src]="'assets/images/app.png'" class="h-14 inline-block m-1" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=tr.gov.goc.mobil" target="_blank"><img
+                            [src]="'assets/images/play.png'" class="h-14 inline-block m-1" alt=""></a>
+                </div>
+
+
+            </div>
+            <div class="relative mt-4 lg:mx-16 z-3">
+                <img [src]="'assets/images/phone/3-phone-half.png'" alt="" class="mover">
+            </div>
+        </div><!--end grid-->
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End Hero -->
+
+<!-- Start -->
+<section class="relative md:py-24 py-16" id="features">
+    <div class="container relative">
+        <div class="grid grid-cols-1 pb-6 text-center">
+            <h6 class="text-red-500 uppercase text-sm font-bold tracking-wider mb-3">Özellikler</h6>
+            <h4 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-bold">Güçlü Özellikleri Keşfedin
+            </h4>
+
+            <p class="text-slate-400 max-w-xl mx-auto">Çok sayıda güçlü özelliğe sahip platformumuzun gücünü açığa
+                çıkarın ve hedeflerinize ulaşmanız için sizi güçlendirin.</p>
+        </div><!--end grid-->
+
+        <app-feature-two />
+    </div><!--end container-->
+
+    <div class="container relative md:mt-24 mt-16">
+        <app-about-one />
+    </div><!--end container-->
+
+    <div class="container relative md:mt-24 mt-16">
+        <app-about-two />
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+
+<!-- Start -->
+<section class="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20" id="screenshot">
+    <div class="container relative">
+        <div class="grid grid-cols-1 pb-6 text-center">
+            <h6 class="text-red-500 uppercase text-sm font-bold tracking-wider mb-3">Screenshots</h6>
+            <h4 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-bold">Sade ve Güzel
+                Arayüz</h4>
+
+            <p class="text-slate-400 max-w-xl mx-auto">Çok sayıda güçlü özellik ile platformumuzun gücünü açığa çıkarın
+                özellikler, hedeflerinize ulaşmanız için sizi güçlendirir.</p>
+        </div><!--end grid-->
+
+        <app-screenshot />
+
+    </div><!--end container-->
+</section><!--end section-->
+<!-- End -->
+
+<!-- Start -->
+<section class="relative overflow-hidden md:py-24 py-16" id="faqs">
+    <app-faq />
+</section><!--end section-->
+<!-- End Section-->
+
+<!-- Start -->
+<section class="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20" id="download">
+    <app-download />
+</section><!--end section-->
+<!-- End -->
+
+
+<!-- Start -->
+<section class="relative md:py-24 py-16 bg-slate-50/50 dark:bg-slate-800/20" id="contact">
+    <app-contact />
+</section><!--end section-->
+<!-- End -->
+
+<!-- Business Partner -->
+<section class="py-6 border-t border-b border-gray-100 dark:border-gray-800">
+    <app-partner />
+</section><!--end section-->
+<!-- Business Partner -->
+
+<app-footer />

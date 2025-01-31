@@ -1,0 +1,9 @@
+<div class="grid grid-cols-1 mt-6 relative">
+    <div class="tiny-four-item">
+        <div *ngFor="let item of images" class="tiny-slide">
+            <lightgallery>
+                <a [href]="item" class="lightbox"><img [src]="item" alt=""></a>
+            </lightgallery>
+        </div>
+    </div>
+</div>

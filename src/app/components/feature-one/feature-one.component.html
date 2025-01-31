@@ -1,0 +1,21 @@
+<div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
+    <div *ngFor="let item of feature" class="p-6 transition duration-500 rounded-3xl"
+        [ngClass]="item.active ? ' shadow-xl shadow-slate-100 dark:shadow-slate-800 ' : 'hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 '">
+        <div
+            class="size-16 bg-red-500/5 text-red-500 rounded-2xl flex align-middle justify-center items-center shadow-sm">
+            <i [attr.data-feather]="item.icon" class="size-5"></i>
+        </div>
+
+        <div class="content mt-7">
+            <a [routerLink]="" (click)="$event.preventDefault()"
+                class="text-lg hover:text-red-500 dark:text-white dark:hover:text-red-500 transition-all duration-500 ease-in-out font-semibold">{{item.title}}</a>
+            <p class="text-slate-400 mt-3">{{item.desc}}</p>
+
+            <div class="mt-3">
+                <a [routerLink]="" (click)="$event.preventDefault()"
+                    class="hover:text-red-500 dark:hover:text-red-500 after:bg-red-500 dark:text-white transition duration-500">Read
+                    More <i class="mdi mdi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div><!--end content-->
+</div>

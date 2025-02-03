@@ -25,34 +25,34 @@ export class FeatureTwoComponent {
   feature1: Feature1[] = [
     {
       icon: 'monitor',
-      title: 'Başlık',
-      desc: 'lorem ipsum dolor sit amet'
+      title: 'Bildirim Yükümlülüğü ',
+      desc: 'o	GöçBil mobil uygulamasında yer alan “Bildirim Yükümlülüğü Modülü” ile; bildirim yükümlülüğüne tabii yabancıların İl Göç İdaresi Müdürlüklerine gitmesine gerek kalmaksızın yüz tanıma, konum tespiti ile GöçBil Mobil Uygulaması üzerinden bildirim yükümlülüğünü yerine getirebilmektedir.'
     },
     {
       icon: 'feather',
-      title: 'Başlık',
+      title: 'Randevu İşlemleri',
       desc: 'lorem ipsum dolor sit amet'
     },
     {
       icon: 'eye',
-      title: 'Başlık',
+      title: 'Yol İzin Belgesi İşlemleri',
       desc: 'lorem ipsum dolor sit amet'
     },
   ]
   feature2: Feature2[] = [
     {
       icon: 'user-check',
-      title: 'Başlık',
+      title: 'Evlenme Ehliyet Belgesi İşlemleri',
       desc: 'lorem ipsum dolor sit amet'
     },
     {
       icon: 'smartphone',
-      title: 'Başlık',
+      title: 'Tanıtım Kart',
       desc: 'lorem ipsum dolor sit amet'
     },
     {
       icon: 'heart',
-      title: 'Başlık',
+      title: 'YİMER',
       desc: 'lorem ipsum dolor sit amet'
     },
   ]

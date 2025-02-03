@@ -1,0 +1,27 @@
+.baslik {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+@media (min-width: 768px) {
+    .baslik {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+    }
+}
+
+.baslik2 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+@media (min-width: 768px) {
+    .baslik2 {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+}

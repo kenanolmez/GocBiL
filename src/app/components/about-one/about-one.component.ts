@@ -17,12 +17,12 @@ export class AboutOneComponent {
     {
       icon: 'shield',
       title: 'Başlık',
-      desc: 'lorem ipsum dolor sit amet'
+      desc: 'Yabancının kişisel bilgileri entegrasyon ile GöçNet Sisteminden alınacaktır.'
     },
     {
       icon: 'aperture',
       title: 'Başlık',
-      desc: 'lorem ipsum dolor sit amet'
+      desc: '•	Yabancının statüsüne bağlı olarak kimlik bilgilerine erişim sağlayabilecektir.'
     },
   ]
 }
